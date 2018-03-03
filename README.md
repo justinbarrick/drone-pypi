@@ -1,4 +1,4 @@
-Flynn plugin for Drone.
+Flynn plugin for Drone to deploy Buildpacks. See [drone-flynn-docker-push](https://github.com/devgeniem/drone-flynn-docker-push) for pushing Docker images to Flynn.
 
 To use, set your secrets:
 
