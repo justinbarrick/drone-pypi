@@ -15,5 +15,5 @@ pipeline:
     image: 2327co/drone-flynn:latest
     secrets: [ FLYNN_KEY, FLYNN_DOMAIN, FLYNN_TLSPIN ]
     environment:
-      FLYNN_APP: 2327co-fundchange-master
+      FLYNN_APP: 2327co-master
 ```
