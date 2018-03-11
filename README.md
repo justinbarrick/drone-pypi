@@ -1,19 +1,16 @@
-Flynn plugin for Drone to deploy Buildpacks. See [drone-flynn-docker-push](https://github.com/devgeniem/drone-flynn-docker-push) for pushing Docker images to Flynn.
+Pypi plugin for Drone to deploy to pypi.
 
 To use, set your secrets:
 
-* `FLYNN_KEY`: your controller key
-* `FLYNN_TLSPIN`: your tls pin
-* `FLYNN_APP`: the flynn app to deploy
-* `FLYNN_DOMAIN`: the cluster domain
+* `PYPI_REPOSITORY`: pypi repository to use (defaults to https://pypi.python.org/pypi)
+* `PYPI_USERNAME`: pypi username to use
+* `PYPI_PASSWORD`: pypi password to use
 
 Example `.drone.yml`:
 
 ```
 pipeline:
-  flynn_push:
-    image: 2327co/drone-flynn:latest
-    secrets: [ FLYNN_KEY, FLYNN_DOMAIN, FLYNN_TLSPIN ]
-    environment:
-      FLYNN_APP: 2327co-master
+  publish:
+    image: justinbarrick/drone-pypi:latest
+    secrets: [ PYPI_REPOSITORY, PYPI_USERNAME, PYPI_PASSWORD ]
 ```

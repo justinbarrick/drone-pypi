@@ -1,6 +1,5 @@
-FROM bmv437/flynn-cli:alpine
+FROM python:alpine3.6
 
-RUN apk update && apk add bash
 COPY run.sh /run.sh
 
 ENTRYPOINT ["/run.sh"]

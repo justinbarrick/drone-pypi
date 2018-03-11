@@ -2,7 +2,7 @@ pipeline:
   publish:
     image: plugins/docker
     secrets: [ DOCKER_USERNAME, DOCKER_PASSWORD ]
-    repo: 2327co/drone-flynn
+    repo: justinbarrick/drone-pypi
     tags:
     - latest
     - ${DRONE_BRANCH}-${DRONE_COMMIT_SHA:0:7}

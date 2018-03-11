@@ -1,6 +1,14 @@
 #!/bin/sh
 
-flynn cluster add -p $FLYNN_TLSPIN default $FLYNN_DOMAIN $FLYNN_KEY
-flynn remote add $FLYNN_APP
+cat << EOF > ~/.pypyirc
+[distutils]
+index-servers = pypi
 
-git push -f $FLYNN_APP master
+[pypi]
+repository=${PYPI_REPOSTORY:-https://pypi.python.org/pypi}
+username=$PYPI_USERNAME
+password=$PYPI_PASSWORD
+EOF
+
+chmod 0600 ~/.pypyirc
+python setup.py sdist upload -r pypi
