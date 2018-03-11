@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cat << EOF > ~/.pypyirc
+cat << EOF > ~/.pypirc
 [distutils]
 index-servers = pypi
 
@@ -10,5 +10,5 @@ username=$PYPI_USERNAME
 password=$PYPI_PASSWORD
 EOF
 
-chmod 0600 ~/.pypyirc
+chmod 0600 ~/.pypirc
 python setup.py sdist upload -r pypi
