@@ -2,7 +2,7 @@ Pypi plugin for Drone to deploy to pypi.
 
 To use, set your secrets:
 
-* `PYPI_REPOSITORY`: pypi repository to use (defaults to https://pypi.python.org/pypi)
+* `PYPI_REPOSITORY`: pypi repository to use (defaults to https://pypi.python.org/pypi).
 * `PYPI_USERNAME`: pypi username to use.
 * `PYPI_PASSWORD`: pypi password to use.
 
